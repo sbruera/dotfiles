@@ -20,6 +20,13 @@ return require('packer').startup(function(use)
 	  end
   })
 
+use {
+  'dracula/vim',
+  config = function()
+    vim.cmd([[colorscheme dracula]])
+  end
+}
+
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 use('nvim-treesitter/playground')
