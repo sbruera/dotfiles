@@ -29,7 +29,7 @@ local config = {
         },
 
         -- Set colorscheme to use
-        colorscheme = "dracula",
+        colorscheme = "kanagawa",
 
         -- Add highlight groups in any theme
         highlights = {

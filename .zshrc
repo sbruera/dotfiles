@@ -147,8 +147,13 @@ export SSHUSER="sbruera"
 function mount-ssh() {
     if [ "$1" = "psi6" ]
     then
-        sudo sshfs -p 122 -o allow_other,default_permissions sbruera@dev.psiware.com.ar:/ /mnt/psi6 
-
+        sudo sshfs -p 122 -o allow_other,default_permissions sbruera@dev.psiware.com.ar:/var/www/html/wc/sbruera /mnt/psi6 
+    elif [ "$1" = "cac" ]
+    then
+        sudo sshfs -p 122 -o allow_other,default_permissions sbruera@dev.psiware.com.ar:/var/www/html/wc/sbruera/web-bcr/cac /mnt/cac 
+    elif [ "$1" = "cms" ]
+    then
+        sudo sshfs -p 122 -o allow_other,default_permissions sbruera@dev.psiware.com.ar:/var/www/html/wc/sbruera/web-bcr/cms /mnt/cms 
     elif [ "$1" = "psi20" ]
     then
         sudo sshfs -p 8122 -o allow_other,default_permissions sbruera@dev.psiware.com.ar:/var/www/html/wc/sbruera /mnt/psi20 
